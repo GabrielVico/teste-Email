@@ -1,0 +1,38 @@
+<?
+
+ $composer require --dev phpunit/phpunit
+{
+       "require:{
+               "phpunit/phpunit: "9.5"
+       }
+}
+    class Email
+    {
+        private $email;
+        private function__contruct(string $email)
+        {
+           $this->validarEmail($email):
+           
+           $this->email = $email;
+        }
+}
+
+public static function retornarInstancial(string $email): self
+ { 
+    return new self($email);
+ }
+    
+ public function validarEmail(string $email):void
+ {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+     throw new \InvalidArgumentExeption(
+          sprintf(
+                 '"%s" não é um e-mail válido',
+                 $email
+               )
+           );
+       }
+    }
+}
+
+?>
